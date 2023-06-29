@@ -157,28 +157,31 @@ const Modal: React.FC<ModalProps> = ({
                             </div>
 
                             {/* FOOTER */}
-                            <div className='flex flex-col gap-2 p-6'><div className='
+                            <div className='flex flex-col gap-2 p-6'>
+                                <div className='
                             flex
                             felx-row
                             items-center
                             gap-4
                             w-full
                             '>
-                                {secondaryAction && secondaryActionLabel && (
+                                    {secondaryAction && secondaryActionLabel && (
 
+                                        <Button
+                                            outline
+                                            disabled={disabled}
+                                            label={secondaryActionLabel}
+                                            onClick={handleSecondaryAction}
+                                        />
+                                    )}
                                     <Button
-                                        outline
                                         disabled={disabled}
-                                        label={secondaryActionLabel}
-                                        onClick={handleSecondaryAction}
+                                        label={actionLabel}
+                                        onClick={handleSubmit}
                                     />
-                                )}
-                                <Button
-                                    disabled={disabled}
-                                    label={actionLabel}
-                                    onClick={handleSubmit}
-                                />
-                            </div></div>
+                                </div>
+                                {footer}
+                            </div>
                         </div>
                     </div>
                 </div>
