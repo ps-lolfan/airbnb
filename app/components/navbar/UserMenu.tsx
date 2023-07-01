@@ -12,7 +12,7 @@ import { User } from '@prisma/client';
 import { signOut } from "next-auth/react";
 
 interface UserMenuProps {
-    currentUser: User | null
+    currentUser?: User | null
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({
@@ -65,7 +65,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     top-12
                     text-sm
                     '>
-                    <div className='flex flex-col cursor-pointer' >
+                    <div className='flex flex-col cursor-pointer'>
                         {currentUser ? (
                             <>
                                 <MenuItem
