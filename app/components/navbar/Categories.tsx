@@ -1,3 +1,5 @@
+'use client';
+
 import Container from '../Container'
 
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
@@ -132,7 +134,6 @@ const Categories = () => {
                         selected={category === item.label}
                     />
                 ))}
-
             </div>
         </Container>
     )
