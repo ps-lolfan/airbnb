@@ -25,8 +25,6 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
 
     const { getAll } = useCountries();
 
-    console.log(getAll())
-
     return (
         <div>
             <Select
